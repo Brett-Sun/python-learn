@@ -38,3 +38,6 @@ open("data-1.bin", 'wb').write(data)
 inputData = open('data-1.bin', 'rb').read()
 print(inputData)
 print(struct.unpack('>i4shf', inputData))
+
+
+
