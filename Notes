@@ -1,0 +1,26 @@
+文件处理工具
+    open(...)
+        write
+        writelines
+        read
+        readlines
+
+    encode
+    decode
+
+    struct - module
+        pack
+        unpack
+
+    os.open(...)
+
+目录处理工具
+    处理单一目录
+        os.popen
+        glob.glob
+        os.listdir
+    
+    遍历目录树
+        os.walk
+
+    

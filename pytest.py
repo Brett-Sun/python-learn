@@ -40,6 +40,21 @@ print(inputData)
 print(struct.unpack('>i4shf', inputData))
 
 
-print("===============Python Directory Access: ===============")
+print("===============Python Directory Access: glob===============")
 
+import os
+print(os.popen('dir /B').readlines())
+print(os.popen('dir *.txt /B').readlines())
 
+import glob
+print(glob.glob('*'))
+print(glob.glob('.git/*'))
+
+print(os.listdir(os.curdir))
+print(os.listdir('.git'))
+
+for (thisdir, subshere, fileshere) in os.walk(os.curdir):
+    print(thisdir + '==========')
+    for fname in fileshere:
+        path = os.path.join(thisdir, fname)
+        print(path)
