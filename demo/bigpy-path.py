@@ -10,21 +10,21 @@ allsizes = []
 for srcdir in sys.path:
     if trace == 1 or trace == 3:
         if logfile:
-            open('result.log', 'a').writelines("Searched path root: %s\n" % srcdir)
+            open('result.tmp', 'a').writelines("Searched path root: %s\n" % srcdir)
         else:
             print("Searched path root: ", srcdir)
     
     for (thisDir, subsHere, filesHere) in os.walk(srcdir):
         if trace == 1 or trace == 3:
             if logfile:
-                open('result.log', 'a').writelines('... %s\n' % thisDir)
+                open('result.tmp', 'a').writelines('... %s\n' % thisDir)
             else:
                 print('...', thisDir)
         for filename in filesHere:
             if filename.endswith('.py'):
                 if trace == 2 or trace == 3:
                     if logfile:
-                        open('result.log', 'a').writelines('...... %s\n' % filename)
+                        open('result.tmp', 'a').writelines('...... %s\n' % filename)
                     else:
                         print('......', filename)
                 fullname = os.path.join(thisDir, filename)
