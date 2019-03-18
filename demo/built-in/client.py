@@ -1,0 +1,36 @@
+from built_in import *
+
+print(A.name)
+# print(dir(A))
+print(A.Copy)
+print(A.Paste)
+print(A.Cut)
+print(A.Delete)
+
+print(B.name)
+# print(dir(B))
+print(B.Copy)
+print(B.Paste)
+print(B.Cut)
+print(B.Delete)
+
+print(C.name)
+# print(dir(C))
+print(C.Copy)
+print(C.Paste)
+print(C.Cut)
+print(C.Delete)
+
+print(D.name)
+# print(dir(D))
+print(D.Copy)
+print(D.Paste)
+print(D.Cut)
+print(D.Delete)
+
+print(E.name)
+# print(dir(E))
+print(E.Copy)
+print(E.Paste)
+print(E.Cut)
+print(E.Delete)
