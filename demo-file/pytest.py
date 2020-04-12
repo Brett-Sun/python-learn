@@ -11,20 +11,20 @@ print(data.encode('utf8'))
 import sys
 print(sys.getdefaultencoding())
 
-print(open('data.txt', 'w', encoding='latin1').write(data))
-print(open('data.txt', 'r', encoding='latin1').read())
-print(open('data.txt', 'r').read())
-print(open('data.txt', 'rb').read())
+print(open(r'demo-file\data.txt', 'w', encoding='latin1').write(data))
+print(open(r'demo-file\data.txt', 'r', encoding='latin1').read())
+print(open(r'demo-file\data.txt', 'r').read())
+print(open(r'demo-file\data.txt', 'rb').read())
 
 
 data = b"a\0b\rc\r\nd"
 print(data)
-print(open('data.bin', 'w').write(data.decode()))
-print(open('data.bin', 'r').read())
+print(open(r'demo-file\data.bin', 'w').write(data.decode()))
+print(open(r'demo-file\data.bin', 'r').read())
 
-print(open('tmp.txt', 'r').read())
-print(open('tmp.txt', 'rb').read())
-print(open('tmp.txt', 'r', encoding='gb2312').read())
+print(open(r'demo-file\tmp.txt', 'r').read())
+print(open(r'demo-file\tmp.txt', 'rb').read())
+print(open(r'demo-file\tmp.txt', 'r', encoding='gb2312').read())
 
 
 print("===============Python File Access: struct===============")
@@ -33,9 +33,9 @@ print("===============Python File Access: struct===============")
 import struct
 data = struct.pack('>i4shf', 2, b'spam', 3, 1.234)
 print(data)
-open("data-1.bin", 'wb').write(data)
+open(r"demo-file\data-1.bin", 'wb').write(data)
 
-inputData = open('data-1.bin', 'rb').read()
+inputData = open(r'demo-file\data-1.bin', 'rb').read()
 print(inputData)
 print(struct.unpack('>i4shf', inputData))
 

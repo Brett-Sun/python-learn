@@ -11,7 +11,7 @@ class __Plugin(object):
 
 class __PluginTree(object):
     def __init__(self, *args, **kwargs):
-        return super().__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
     
     def addPlugin(self, iPlugin):
         self.__dict__[iPlugin.name] = iPlugin
